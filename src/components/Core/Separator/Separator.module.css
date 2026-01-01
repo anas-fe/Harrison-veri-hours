@@ -1,0 +1,16 @@
+.separator {
+	align-self: stretch;
+	border: none;
+	opacity: 1;
+
+	&.vertical {
+		width: 1px;
+		border-left: 1px solid var(--primary-color);
+		min-height: 45px;
+	}
+
+	&.horizontal {
+		height: 1px;
+		border-top: 1px solid var(--primary-color);
+	}
+}

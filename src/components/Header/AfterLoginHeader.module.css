@@ -1,0 +1,155 @@
+.navbarContainer {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  max-width: 100%;
+  padding-block: 12px;
+  background-color: var(--background);
+  padding-inline: 40px;
+  border-bottom: 1px solid var(--border-color);
+
+  & svg {
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+.loginHeader {
+  position: relative;
+}
+
+.mainHeader {
+  margin-inline-end: auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.backBtn {
+  cursor: pointer;
+  background-color: var(--main-color);
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & svg {
+    font-size: 16px;
+    color: var(--white-color);
+    margin-right: 3px;
+  }
+}
+
+.heading {
+  color: #1C1C1C;
+  font-size: 20px;
+  font-family: 'Montserrat';
+  margin: 0;
+}
+
+.profileContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  margin-right: 15px;
+
+  & p {
+    font-size: 12px;
+    color: #484848;
+    font-weight: 500;
+  }
+
+  & span {
+    font-size: 12px;
+    color: #484848;
+    font-weight: 400;
+  }
+}
+
+.profileInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+}
+
+.notification_header {
+  height: 40px !important;
+  width: 40px !important;
+  border-radius: 0.5rem;
+  /* border: 1px solid var(--border-color); */
+  background-color: var(--white-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+
+  & svg {
+    font-size: 22px;
+  }
+
+  & p {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    height: 15px;
+    width: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ea5455;
+    border-radius: 50%;
+    font-size: 12px;
+    color: var(--white-color);
+  }
+}
+
+.profileImg {
+  border-radius: 50%;
+  height: 45px;
+  width: 45px;
+  cursor: pointer;
+
+  & img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: top center;
+  }
+}
+
+.newsTickerContainer {
+  padding-block: 6px;
+  width: 100%;
+  text-align: center;
+  background-color: var(--main-color);
+  color: var(--white-color);
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+  z-index: 1;
+}
+
+.notificationBtn {
+  min-width: fit-content !important;
+  padding-inline: 10px !important;
+  padding-block: 10px !important;
+  & svg {
+    color: var(--icon-color);
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .heading,
+  .backBtn {
+    display: none;
+  }
+}
+
+.switch_container {
+  position: relative;
+}

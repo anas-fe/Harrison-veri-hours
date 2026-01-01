@@ -1,0 +1,78 @@
+.textAreaBox {
+  position: relative;
+
+  &.inline {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 10px;
+    align-items: center;
+  }
+}
+
+.labelOnTop:has(textarea:focus) label {
+  top: 1rem;
+}
+
+.labelOnTop.hasValue label {
+  top: 1rem;
+}
+
+.label {
+  color: var(--primary-text-color);
+  text-transform: capitalize;
+  font-family: var(--ff-primary-bold);
+  font-size: var(--fs-base);
+  margin-bottom: 4px;
+  margin-inline-start: 8px;
+}
+
+.labelOnTop textarea:focus {
+  padding-block-start: 1.8rem;
+}
+
+.labelOnTop.hasValue textarea {
+  padding-block-start: 1.8rem;
+}
+
+.textAreaBox textarea {
+  font-family: var(--ff-primary-reg);
+  font-size: 13px;
+  padding: 12px 10px;
+  width: 100%;
+  border: 1px solid var(--border-color) !important;
+  transition: all 0.3s ease-in-out;
+  border-radius: var(--input-border-radius);
+  background-color: var(--input-background-color);
+}
+
+.secondary textarea {
+  background-color: #f1f2f3 !important;
+  border: none !important;
+}
+
+.textAreaBox textarea:focus {
+}
+
+.textAreaBox textarea::placeholder {
+  color: var(--placeholder-color);
+  font-family: var(--ff-primary-reg);
+  font-size: 13px;
+  text-transform: capitalize;
+  font-weight: 400;
+}
+
+.textAreaBox textarea:disabled {
+  background-color: var(--disabled-input-color);
+  color: #c9c9c9;
+  user-select: none;
+}
+
+.labelDisabled {
+  color: var(--disabled-label-color);
+}
+
+.errorText {
+  color: red;
+  width: fit-content;
+  font-size: 14px;
+}

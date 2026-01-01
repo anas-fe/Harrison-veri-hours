@@ -1,0 +1,133 @@
+.timeInput {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  &.inline {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 10px;
+    align-items: center;
+  }
+
+  & .input__wrapper {
+    position: relative;
+  }
+
+  & .input {
+    border: var(--input-border);
+    width: 100%;
+    cursor: pointer;
+    border-radius: var(--input-border-radius);
+    padding: var(--input-padding-md);
+    font-size: var(--fs-base);
+    background-color: var(--input-background-color);
+
+    &[data-variant="secondary"] {
+      background-color: #F1F2F3 !important;
+      border: none;
+    }
+    &[data-size="sm"] {
+      padding: 6px 12px;
+    }
+
+    &::placeholder {
+      color: var(--placeholder-color);
+      font-family: var(--ff-primary-reg);
+      font-size: 14px;
+      text-transform: capitalize;
+      opacity: 0.4;
+    }
+  }
+
+  & .icon {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--primary-color);
+  }
+}
+
+.DayPickerInput {
+  background-color: var(--white-color);
+  border-radius: var(--border-radius);
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  position: relative;
+  border: 1px solid var(--border-color);
+
+  & > div {
+    padding: 1rem 0.5rem;
+
+    &:not(:last-child) {
+      border-right: 1px solid var(--border-color);
+    }
+  }
+}
+
+.scrollPicker {
+  height: 160px;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  & span {
+    scroll-snap-align: start;
+    display: block;
+    padding: 0.5rem;
+    line-height: 1;
+    border-radius: 4px;
+    text-align: center;
+    user-select: none;
+    &.active {
+    }
+
+    &:hover {
+      background-color: var(--secondary-color);
+      color: var(--white-color);
+    }
+  }
+}
+
+.timeWrapper {
+  height: 300px;
+  aspect-ratio: 1/1;
+  position: relative;
+
+  & .timeItem {
+    position: absolute;
+    cursor: pointer;
+    left: calc(50% - 10px);
+    border-radius: var(--global-border-radius);
+    text-align: center;
+    user-select: none;
+    line-height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    translate: 16px 16px;
+
+    &.minorTimeItem {
+      height: 5px;
+      width: 5px;
+      z-index: 1;
+      background-color: var(--secondary-color);
+      translate: 20px 20px;
+    }
+
+    &:hover {
+      background-color: var(--secondary-color);
+      color: var(--white-color);
+    }
+  }
+}
+
+.active {
+  background-color: var(--primary-color) !important;
+  color: var(--white-color);
+}

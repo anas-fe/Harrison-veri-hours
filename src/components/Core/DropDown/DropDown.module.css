@@ -1,0 +1,82 @@
+.Container {
+  display: flex;
+  flex-direction: column;
+  &.inline {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 10px;
+    align-items: center;
+  }
+
+  & :global(.DropdownOptionContainer__input-container) {
+    padding: 0px;
+    margin: 0px;
+  }
+}
+
+.label {
+  color: var(--label-color);
+  text-transform: capitalize;
+  font-family: var(--ff-primary-bold);
+  font-size: var(--fs-base);
+  margin-bottom: 4px;
+  margin-inline-start: 8px;
+}
+
+.disabled {
+  color: #ababab;
+}
+
+.reactSelect {
+}
+
+.dropdown {
+  border: 1px solid #c7c7c7;
+}
+.errorText {
+  margin-top: 4px;
+  color: red;
+  right: 1rem;
+  z-index: 1;
+  font-size: 14px;
+}
+/* On Hover */
+.dropdown:hover {
+  border: 1px solid black !important;
+}
+
+/* on Focus */
+.dropdown:focus {
+  border: 1px solid black;
+}
+
+/* On Active */
+.dropdown:active {
+  border: 1px solid black;
+}
+
+/* On Disabled */
+.dropdown:disabled {
+  background-color: #f6f6f6;
+  color: #b5b5b5;
+  border: 1px solid #e5e5e5;
+}
+
+.noBorder {
+  border: 0px solid #e5e5e5;
+}
+
+.arrow {
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+}
+
+.leftIconBox {
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  bottom: 50%;
+  transform: translateY(-50%);
+  height: max-content;
+}

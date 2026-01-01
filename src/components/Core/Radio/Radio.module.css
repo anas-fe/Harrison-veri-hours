@@ -1,0 +1,38 @@
+.radioWithLabel {
+  display: flex;
+  align-items: center;
+}
+
+.radioWithLabel label {
+  line-height: 1;
+  margin-left: 8px;
+  color: var(--text-color);
+  font-size: var(--fs-base);
+  font-family: var(--ff-primary-med) !important;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+
+.radioInput {
+  accent-color: var(--main-color) !important;
+
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+/* .radioInput:hover {
+  accent-color: var(--main-color) !important;
+} */
+
+.labelDisabled {
+  /* color: #dddddd; */
+  color: var(--text-color);
+}
+
+.labelChecked {
+}
+
+.label {
+  color: var(--text-color);
+}

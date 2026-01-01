@@ -1,0 +1,10 @@
+:root {
+  --_padding-y-md: 11px;
+  --_padding-y-sm: 6px;
+  --_padding-x-md: 1rem;
+  --_padding-x-sm: 12px;
+  --input-padding-md: var(--_padding-y-md) var(--_padding-x-md);
+  --input-padding-sm: var(--_padding-y-sm) var(--_padding-x-sm);
+  --input-border-radius: 5.143px;
+  --input-border-radius-rounded: 50px;
+}

@@ -1,0 +1,64 @@
+.wrapper {
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.pageMain {
+  height: calc(100vh - 70px);
+  overflow-x: clip;
+  overflow-y: auto;
+  padding: 40px;
+  overflow-clip-margin: 20px;
+  border-radius: var(--section-border-radius);
+
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  @media screen and (max-width: 992px) {
+    .pageMain {
+      height: calc(100vh - 105px);
+    }
+  }
+}
+
+.GiHamburgerMenuMobile {
+  font-size: 24px;
+  color: var(--primary-text-color);
+  cursor: pointer;
+  flex-shrink: 0;
+  margin-right: 10px;
+}
+
+.sidebarDiv {
+  width: 260px;
+}
+
+.iscollapsed {
+  width: 80px;
+}
+
+.contentDiv {
+  width: calc(100% - 260px);
+}
+
+.contentIsCollapsed {
+  width: calc(100% - 80px);
+}
+
+@media screen and (max-width: 992px) {
+  .contentOnMobileDiv {
+    width: 100%;
+  }
+
+  .sidebarOnMobileDiv {
+    position: absolute;
+  }
+
+  .footer {
+    text-align: center;
+    gap: 1rem;
+    flex-direction: column;
+  }
+}

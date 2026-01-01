@@ -1,0 +1,77 @@
+.popperContent {
+  background-color: var(--white-color);
+  padding: 14px 4px;
+  box-shadow: 0 8px 30px 0 rgba(0, 0, 0, 0.07);
+  z-index: 100;
+  border-radius: 5px;
+  min-width: 100px;
+  margin-block-start: 0px;
+
+  &.popperInsideElement {
+    background-color: transparent;
+    padding: 0;
+  }
+
+  & .list {
+    display: grid;
+  }
+}
+
+.popperTrigger {
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+
+.popperPortal {
+  background: var(--background);
+  /* border-radius: var(--global-border-radius); */
+  z-index: 200;
+}
+
+.menuItem {
+  color: var(--text-color);
+  font-size: 12px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-inline: 5px;
+  line-height: 1;
+  cursor: pointer;
+
+  /* &:hover {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border-radius: var(--input-border-radius);
+    padding-block: 5px;
+  } */
+  &:not(:last-child) {
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+    border-bottom: 1px solid var(--light-gray);
+  }
+}
+
+.popperParent {
+  z-index: 300;
+}
+
+.popperArrow {
+  fill: var(--white-color);
+  width: 70px;
+  height: 30px;
+}
+
+.children_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+
+  & svg {
+    color: var(--primary-text-color-v1);
+  }
+}

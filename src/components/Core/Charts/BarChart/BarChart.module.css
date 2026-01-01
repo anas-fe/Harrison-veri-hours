@@ -1,0 +1,20 @@
+.tooltip {
+  background: var(--background-quinary);
+  border: none;
+  backdrop-filter: blur(10px);
+  border-radius: 5px;
+  padding: 8px;
+  min-width: 85px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.label {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--white-color);
+}
+.value {
+  font-size: 14px;
+  color: var(--icon-color);
+}

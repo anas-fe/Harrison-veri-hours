@@ -1,0 +1,13 @@
+.container {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-radius: 26px;
+  border: 1.661px solid var(--border-color-v1);
+  background: var(--box-background-color);
+
+  @media (max-width: 992px) {
+    padding: 20px;
+  }
+}

@@ -1,0 +1,187 @@
+.box {
+  user-select: none;
+  height: 200px;
+}
+
+.box label {
+  color: var(--primary-color);
+  text-transform: capitalize;
+  font-family: var(--ff-primary-reg);
+  font-size: var(--fs-100);
+}
+
+.uploadImageBox {
+  width: 100%;
+  height: 100%;
+  border: 1px solid var(--border-color-v2);
+  border-radius: 15px;
+  background: var(--white-color);
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.uploadImageBoxContent,
+.uploadBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 25px 30px;
+  /* height: 100%; */
+}
+
+.contentText {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+
+  & > p:first-child {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--text-color-dark);
+    margin: 0;
+  }
+  & > p {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--text-color);
+    margin: 0;
+  }
+}
+
+.uploadBox .icon {
+  height: 75px;
+  width: 75px;
+  color: var(--label-color);
+}
+
+.uploadBox .uploadIcon {
+  position: absolute;
+  right: 12px;
+  top: 10px;
+  background-color: var(--main-color);
+  width: 43px;
+  height: 43px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.uploadBox .uploadIcon svg {
+  color: var(--white-color);
+  font-size: 20px;
+}
+
+/* Image Uploaded */
+.imageUploaded {
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  position: relative;
+}
+
+.imageUploaded img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  border-radius: inherit;
+}
+
+.imageUploaded .editAndDelete {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.imageUploaded .editAndDelete .icon {
+  background-color: var(--main-color);
+  padding: 8px;
+  cursor: pointer;
+}
+
+.imageUploaded .editAndDelete .icon svg {
+  color: var(--white-color);
+  vertical-align: middle;
+  width: 16px;
+  height: 16px;
+  display: inherit;
+}
+
+.closeIcon {
+  position: absolute;
+  top: 10px;
+  left: 12px;
+  background-color: var(--secondary-color);
+  padding: 8px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.closeIcon svg {
+  color: var(--white-color);
+  vertical-align: middle;
+  display: flex;
+}
+
+.label {
+  color: var(--text-color);
+  margin-inline-start: 8px;
+  text-transform: capitalize;
+  font-family: var(--ff-primary-reg);
+  font-size: var(--fs-100);
+  margin-bottom: 4px;
+}
+
+.loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+.loadingContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+}
+.loadingContainer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.5;
+  z-index: 1;
+}
+
+/* @media screen and (max-width: 600px) {
+  .box {
+    height: 180px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .box {
+    height: 160px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .box {
+    height: 140px;
+  }
+} */

@@ -1,0 +1,109 @@
+.phoneNumberDiv {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  &.inline {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 10px;
+    align-items: center;
+    @media (max-width: 578px) {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+.phoneInputContainer {
+  display: flex;
+  position: relative;
+}
+
+.phoneNumberInput {
+  display: flex;
+  position: relative;
+  width: 100%;
+}
+
+.phoneNumberInput > div {
+  padding: 12px 10px;
+  margin-right: 0;
+  background-color: var(--input-background-color);
+  border: 1px solid var(--border-color);
+  border-top-left-radius: var(--input-border-radius);
+  border-bottom-left-radius: var(--input-border-radius);
+  border-right: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.phoneNumberInput[data-variant="secondary"] > div {
+  background-color: var(--background-secondary) !important;
+}
+
+.phoneNumberInput input {
+  font-family: var(--font-primary);
+  font-size: 13px;
+  padding: 12px 10px;
+  width: 100%;
+  border: 1px solid var(--border-color);
+  border-left: none;
+  transition: all 0.3s ease-in-out;
+  border-top-right-radius: var(--input-border-radius);
+  border-bottom-right-radius: var(--input-border-radius);
+  background-color: var(--input-background-color);
+}
+
+.phoneNumberInput input[data-variant="secondary"] {
+  background-color: var(--background-secondary) !important;
+}
+
+.phoneNumberInput input[data-size="sm"] {
+  padding: var(--input-padding-sm);
+}
+
+.phoneNumberInput input::placeholder {
+  font-family: var(--font-primary);
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--placeholder-color);
+}
+
+.phoneNumberInput:focus-within {
+  outline: none !important;
+}
+
+.phoneNumberInput:focus-within > div,
+.phoneNumberInput:focus-within input {
+  border-color: var(--border-color);
+}
+
+.phoneNumberInput:disabled input,
+.phoneNumberInput:disabled > div {
+  pointer-events: none;
+  opacity: 0.8;
+}
+
+.phoneNumberInput input:disabled {
+  background-color: var(--disabled-input-color);
+  color: #1e1e1e;
+  user-select: none;
+}
+
+.error {
+  border: 1px solid red !important;
+}
+
+.error > div,
+.error input {
+  border-color: red !important;
+}
+
+.errorText {
+  margin-top: 4px;
+  color: red;
+  width: fit-content;
+  font-size: 14px;
+}
+
+.offsetLeftError {
+  right: 56px;
+}

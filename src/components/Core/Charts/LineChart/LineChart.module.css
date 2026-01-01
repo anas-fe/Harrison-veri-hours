@@ -1,0 +1,105 @@
+.customTooltip {
+  background-color: rgba(107, 107, 107, 0.3);
+  backdrop-filter: blur(1px);
+  border-radius: 5px;
+  padding: 20px 10px;
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.content_container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.failedTitle {
+  margin-bottom: 0px;
+  font-family: var(--ff-primary-reg);
+  font-size: 14px;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    margin-inline-end: 10px;
+    width: 25px;
+    height: 8px;
+    background-color: var(--secondary-color);
+  }
+}
+.SuccessfulTitle {
+  margin-bottom: 0px;
+  font-family: var(--ff-primary-reg);
+  font-size: 14px;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    margin-inline-end: 10px;
+    width: 25px;
+    height: 8px;
+    background-color: var(--primary-color);
+  }
+}
+.Value {
+  margin-bottom: 0px;
+  font-family: var(--ff-primary-semiBold);
+  font-size: 16px;
+}
+
+.alertTitle {
+  margin-bottom: 0px;
+  font-family: var(--ff-primary-reg);
+  font-size: 14px;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    margin-inline-end: 10px;
+    width: 25px;
+    height: 8px;
+    background-color: var(--danger-color-v1);
+  }
+}
+
+.checkInTitle {
+  margin-bottom: 0px;
+  font-size: 14px;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    margin-inline-end: 10px;
+    width: 25px;
+    height: 8px;
+    background-color: var(--light-green-color);
+  }
+}
+
+.legendContainer {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 10px;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 400;
+  color: #4a4a4a;
+}
+
+.legendDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.legendText {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--black-color);
+}

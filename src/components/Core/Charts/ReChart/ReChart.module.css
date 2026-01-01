@@ -1,0 +1,48 @@
+.customTooltip {
+  background-color: rgba(107, 107, 107, 0.3);
+  backdrop-filter: blur(1px);
+  border-radius: 5px;
+  padding: 20px 10px;
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.content_container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.failedTitle {
+  margin-bottom: 0px;
+  font-family: var(--ff-primary-reg);
+  font-size: 14px;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    margin-inline-end: 10px;
+    width: 25px;
+    height: 8px;
+    background-color: var(--secondary-color);
+  }
+}
+.SuccessfulTitle {
+  margin-bottom: 0px;
+  font-family: var(--ff-primary-reg);
+  font-size: 14px;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    margin-inline-end: 10px;
+    width: 25px;
+    height: 8px;
+    background-color: var(--primary-color);
+  }
+}
+.Value {
+  margin-bottom: 0px;
+  font-family: var(--ff-primary-semiBold);
+  font-size: 16px;
+}
