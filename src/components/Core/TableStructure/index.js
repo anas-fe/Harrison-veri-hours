@@ -49,6 +49,15 @@ const TableStructure = ({
   return (
     <div className={cn(classes.main, inBox && classes.inBox)}>
       <div className={headerTitle && classes.table_heading}>
+        {headerTitle && (
+          <span>
+            {headerTitle && isValidElement(headerTitle)
+              ? cloneElement(headerTitle, {
+                  style: { marginInlineEnd: "auto" },
+                })
+              : headerTitle}
+          </span>
+        )}
         {Object?.keys(headerHandlers)?.length > 0 && (
           <div className={classes.headerFilterDiv}>
             {Object?.keys(headerHandlers)?.map((e, index) => {
@@ -68,7 +77,14 @@ const TableStructure = ({
             style={{ minWidth: `${tableMinWidth}px` }}
           >
             <thead className={classes.tableHeader}>
-              <tr className={classes.tableRow}>
+              <tr
+                className={classes.tableRow}
+                style={{
+                  "--_border-width": "1px 1px 0px 1px",
+                  "--_border-bottom": "1px solid var(--border-color)",
+                  "--_background": "var(--background)",
+                }}
+              >
                 {Array.isArray(tableHeaders) &&
                   tableHeaders?.map((e, index) => {
                     if (!e) {

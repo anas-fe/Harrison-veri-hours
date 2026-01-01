@@ -5,7 +5,7 @@
   --label-color: #18214c;
   --tertiary-color: #33333c;
   --quaternary-color: #092aff;
-  --text-color: #18214c;
+  --text-color: #1C1C1C;
   --text-color-dark: #ffffff;
   --text-color-light: #858585;
   --primary-text-color: var(--text-color);
@@ -17,7 +17,7 @@
   --light-text-color: #faf7ec;
 
   --white-color: #ffffff;
-  --black-color: #000000;
+  --black-color: #1C1C1C;
   --danger-color: #de0000;
   --danger-color-v1: #ed555a;
   --danger-color-light: #ed555a40;
@@ -113,6 +113,7 @@
   --fs-400: 18px;
   --fs-200: 16px;
   --fs-100: 14px;
+  --fs-50: 12px;
   --fs-base: var(--fs-100);
   --fs-btn: var(--fs-100);
 
@@ -360,7 +361,7 @@ body h5 {
 }
 
 body h6 {
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1.2;
 }
 
