@@ -62,7 +62,8 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  padding: 12px 20px;
+  /* padding: 12px 0; */
+  justify-content: space-between;
 }
 
 .table {
@@ -73,7 +74,7 @@
 .scrollWrapper {
   box-shadow: var(--section-shadow);
   position: relative;
-  padding-inline: 20px;
+  /* padding-inline: 20px; */
   padding-bottom: 10px;
   .inBox & {
     padding-bottom: 0;
@@ -93,7 +94,7 @@
   bottom: -1px;
 }
 .tableWrapper {
-  height: 560px;
+  /* height: 560px; */
   overflow-y: auto;
   border-radius: var(--border-radius);
   border-bottom-right-radius: 0;
@@ -118,6 +119,7 @@
   position: sticky;
   top: 0;
   z-index: 10;
+  border-bottom: 1px solid var(--border-color);
 }
 
 .tableRow {
@@ -131,9 +133,9 @@
     position: absolute;
     inset: 0;
     border-radius: var(--_border-radius);
-    background: var(--_background);
-    border-width: var(--_border-width);
-    border-bottom: var(--_border-bottom);
+    /* background: var(--_background); */
+    /* border-width: var(--_border-width); */
+    /* border-bottom: var(--_border-bottom); */
     border-color: var(--border-color);
     z-index: -1;
     border-radius: var(--_border-radius);
@@ -157,14 +159,14 @@
 }
 
 .tableHead {
-  padding: 20px 24px;
-  font-family: var(--ff-primary-semiBold);
+  padding: 20px;
+  white-space: nowrap;
+  font-family: var(--ff-primary-reg);
   color: var(--primary-color);
-  font-weight: 500;
 }
 
 .tableData {
-  padding: 17px 24px;
+  padding: 17px 20px;
   font-size: 14px;
   color: var(--text-color);
   font-family: var(--ff-primary-med);

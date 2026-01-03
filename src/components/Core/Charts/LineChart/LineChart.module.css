@@ -1,17 +1,19 @@
 .customTooltip {
-  background-color: rgba(107, 107, 107, 0.3);
-  backdrop-filter: blur(1px);
-  border-radius: 5px;
-  padding: 20px 10px;
+  background-color: rgba(255, 255, 255, 1);
+  /* backdrop-filter: blur(1px); */
+  border-radius: 8px;
+  padding: 4px 8px;
   font-size: 12px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 4px;
+  box-shadow: #0000001A 0px 2px 16px;
 }
 .content_container {
   display: flex;
   align-items: center;
   gap: 10px;
+  background-color: transparent;
 }
 .failedTitle {
   margin-bottom: 0px;
@@ -65,7 +67,7 @@
 .checkInTitle {
   margin-bottom: 0px;
   font-size: 14px;
-
+/* 
   &::before {
     content: "";
     display: inline-block;
@@ -73,12 +75,12 @@
     width: 25px;
     height: 8px;
     background-color: var(--light-green-color);
-  }
+  } */
 }
 
 .legendContainer {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   gap: 24px;
   margin-top: 10px;
 }

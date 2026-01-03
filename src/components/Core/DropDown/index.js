@@ -18,14 +18,14 @@ export const DropDown = ({
   setter,
   noBorder,
   placeholder,
-  placeholderColor = "var(--placeholder-color)",
+  placeholderColor = "var(--text-color)",
   isMulti,
   style,
   leftIcon,
   Components,
   labelClassName,
   labelStyle,
-  indicatorColor = "var(--icon-color)",
+  indicatorColor = "var(--text-color)",
   indicatorIcon,
   optionLabel,
   optionValue,
@@ -98,8 +98,8 @@ export const DropDown = ({
       backgroundColor: isDisabled
         ? "var(--disabled-input-color)"
         : variant === "primary"
-        ? "var(--input-background-color)"
-        : "var(--input-background-color)",
+        ? "var(--dropdown-secondary-background-color)"
+        : "var(--dropdown-secondary-background-color)",
       padding:
         variant === "primary"
           ? size === "md"
@@ -108,7 +108,7 @@ export const DropDown = ({
           : size === "md"
           ? "12px 10px"
           : "var(--input-padding-sm)",
-      color: "var(--tertiary-text-color)",
+      color: "var(--text-color)",
       boxShadow: "none",
       fontFamily: "var(--ff-primary-reg)",
       fontSize: "var(--fs-base)",
@@ -154,7 +154,8 @@ export const DropDown = ({
         ...defaultStyles,
         fontFamily: "var(--ff-primary-reg)",
         fontSize: "13px",
-        color: "var(--placeholder-color)",
+        fontWeight: "600",
+        color: "var(--text-color)",
       };
     },
 

@@ -48,7 +48,7 @@
 }
 
 .btn[data-type="rounded"] {
-  border-radius: 3rem;
+  border-radius: 4px;
 }
 
 .btn:active {
@@ -72,7 +72,7 @@
 }
 
 .btn[data-size="md"] {
-  padding: 10px 24px;
+  padding: 12px 16px;
   line-height: 1;
 }
 
@@ -95,7 +95,7 @@
 }
 
 .btn[data-variant="primary"] {
-  background-color: var(--primary-color);
+  background-color: var(--button-primary-color);
   color: var(--white-color);
 }
 

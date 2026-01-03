@@ -31,7 +31,7 @@ const TableStructure = ({
     { label: "Shadow Duration", value: "shadowDuration" },
     { label: "Phone", value: "phone" }
   ],
-  totalRecord = 20,
+  totalRecord = 25,
   recordLimit = recordsLimit,
   noDataMessage = "No Users Found",
   customStyle: tableCustomStyle,
@@ -48,7 +48,7 @@ const TableStructure = ({
   const cols = Array(tableHeaders?.length).fill(0);
   return (
     <div className={cn(classes.main, inBox && classes.inBox)}>
-      <div className={headerTitle && classes.table_heading}>
+      <div className={classes.table_heading}>
         {headerTitle && (
           <span>
             {headerTitle && isValidElement(headerTitle)

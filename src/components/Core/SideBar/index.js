@@ -35,7 +35,7 @@ const SideBar = () => {
             })}
           </span>
         </div>
-        <div className={cn(classes.active, classes.logoutContainer)}>
+        <div className={cn(classes.logoutContainer)}>
           <RenderItem
             title="Logout"
             path=""

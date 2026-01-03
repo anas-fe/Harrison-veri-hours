@@ -24,7 +24,7 @@ export default function LineChartComponent({data}) {
           bottom: 0,
         }}
       >
-        <CartesianGrid vertical={false} horizontal={false} />
+        <CartesianGrid vertical={false} horizontal={true} />
         <XAxis
           dataKey="name"
           stroke="var(--text-color)"
@@ -40,29 +40,27 @@ export default function LineChartComponent({data}) {
         />
         <Tooltip
           content={<CustomTooltip />}
-          cursor={{ strokeDasharray: "3 3", stroke: "#FFB300" }}
+          cursor={false}
         />
-        {/* {showLegend && (
           <Legend
             content={<CustomLegend />}
-            wrapperStyle={{ paddingTop: "20px" }}
+            wrapperStyle={{ position: "absolute", top: "-60px" }}
           />
-        )} */}
         <Line
           type="monotone"
-          dataKey="Alerts"
-          stroke="#FF0000"
-          strokeWidth={3}
+          dataKey="Hours Submitted"
+          stroke="#1789C9"
+          strokeWidth={4}
           activeDot={{ r: 6 }}
-          dot={{ r: 5 }}
+          dot={{ r: 0 }}
         />
         <Line
           type="monotone"
-          dataKey="Check-Ins"
-          stroke="#9ACD32"
-          strokeWidth={3}
+          dataKey="Hours Approved"
+          stroke="#023878"
+          strokeWidth={4}
           activeDot={{ r: 6 }}
-          dot={{ r: 5 }}
+          dot={{ r: 0 }}
         />
       </LineChart>
     </ResponsiveContainer>
@@ -75,6 +73,7 @@ const CustomTooltip = ({ active, payload }) => {
       <div className={classes.customTooltip}>
         {payload.map((entry, index) => (
           <div key={index} className={classes.content_container}>
+            <p className={classes.Value} style={{ color: entry.color }}>{`${entry.value}`}</p>
             <p
               className={
                 entry.dataKey === "Alerts"
@@ -82,9 +81,8 @@ const CustomTooltip = ({ active, payload }) => {
                   : classes.checkInTitle
               }
             >
-              {entry.dataKey}:{" "}
+              {entry.dataKey}
             </p>
-            <p className={classes.Value}>{`${entry.value}`}</p>
           </div>
         ))}
       </div>
@@ -93,21 +91,21 @@ const CustomTooltip = ({ active, payload }) => {
   return null;
 };
 
-// const CustomLegend = ({ payload }) => {
-//   return (
-//     <div className={classes.legendContainer}>
-//       {payload?.map((entry, index) => (
-//         <div key={index} className={classes.legendItem}>
-//           <span
-//             className={classes.legendDot}
-//             style={{ backgroundColor: entry.color }}
-//           ></span>
-//           <span className={classes.legendText}>{entry.value}</span>
-//         </div>
-//       ))}
-//     </div>
-//   );
-// };
+const CustomLegend = ({ payload }) => {
+  return (
+    <div className={classes.legendContainer}>
+      {payload?.map((entry, index) => (
+        <div key={index} className={classes.legendItem}>
+          <span
+            className={classes.legendDot}
+            style={{ backgroundColor: entry.color }}
+          ></span>
+          <span className={classes.legendText}>{entry.value}</span>
+        </div>
+      ))}
+    </div>
+  );
+};
 const CustomXAxisTick = (props) => {
   const { x, y, payload } = props;
   return (

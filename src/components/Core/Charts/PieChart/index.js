@@ -53,7 +53,7 @@ export default function Recharts({ type, data }) {
     { name: "Group B", value: 400 },
   ];
 
-  const COLORS = ["#4169E1", "#FF0000", "#9ACD32", "#FF69B4"]; // Blue, Red, Yellow-green, Pink
+  const COLORS = ["#1789C9", "#023878", "#9ACD32", "#FF69B4"]; // Blue, Red, Yellow-green, Pink
 
   const CustomTooltip = ({ active, payload }) => {
     if (active && payload && payload.length) {
@@ -126,16 +126,20 @@ export default function Recharts({ type, data }) {
       {(!type || type === "pie") && (
         <div className={classes.pieChartContainer}>
           <ResponsiveContainer width={"100%"} height={400}>
-            <PieChart>
+            <PieChart barGap={10}>
               <Pie
                 data={data}
-                cx="50%"
+                cx="35%"
                 cy="50%"
                 labelLine={false}
                 label={renderCustomizedLabel}
                 outerRadius={screenSize ? 105 : 135}
                 fill="#8884d8"
                 dataKey="value"
+                stroke="#FFF"
+                strokeWidth={8}
+                innerRadius={screenSize ? 85 : 80}
+                cornerRadius={10}
               >
                 {data?.map((entry, index) => (
                   <Cell
@@ -148,7 +152,7 @@ export default function Recharts({ type, data }) {
             </PieChart>
           </ResponsiveContainer>
 
-          {/* <div className={classes.legendContainer}>
+          <div className={classes.legendContainer}>
             {data?.map((entry, index) => (
               <div key={index} className={classes.legendItem}>
                 <span
@@ -160,7 +164,7 @@ export default function Recharts({ type, data }) {
                 </span>
               </div>
             ))}
-          </div> */}
+          </div>
         </div>
       )}
 

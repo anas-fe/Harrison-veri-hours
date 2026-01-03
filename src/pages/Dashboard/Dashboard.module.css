@@ -4,6 +4,13 @@
   gap: 60px;
 }
 
+.stats_card_wrapper {padding: 16px; border-radius: 12px; display: flex; align-items: center; justify-content: space-between; background-color: #FFF;}
+.stats_card_info {display: flex; gap: 16px; flex-direction: column;}
+.card_value_unit {font-size: 24px; font-weight: 400; color: var(--black); font-style: italic;}
+.stats_card_info .card_value_unit {font-size: 14px; font-family: 'Montserrat-Regular';}
+.stats_card_info .card_title {font-size: 12px;}
+.stats_card_info .card_value {margin-bottom: 0;}
+
 .statsWrapper {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -117,3 +124,7 @@
     gap: 25px;
   }
 }
+
+.charts_wrapper {display: grid; gap: 20px; grid-template-columns: 58% 40%; width: 100%;}
+.charts_wrapper:first-child {width: 70%;}
+/* .charts_wrapper:last-child {width: 30%;} */

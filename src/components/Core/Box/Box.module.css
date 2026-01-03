@@ -1,10 +1,10 @@
 .container {
-  padding: 40px;
+  padding: 16px;
   display: flex;
   flex-direction: column;
   gap: 20px;
-  border-radius: 26px;
-  border: 1.661px solid var(--border-color-v1);
+  border-radius: 12px;
+  /* border: 1.661px solid var(--border-color-v1); */
   background: var(--box-background-color);
 
   @media (max-width: 992px) {

@@ -4,7 +4,7 @@ import { Input } from "../Input";
 function SearchInput({
   value,
   setter,
-  placeholder = "Search",
+  placeholder = "Search here...",
   customStyle,
   inputStyle,
   onClick,
@@ -17,18 +17,18 @@ function SearchInput({
         width: "320px",
         border: "none",
         borderRadius: "var(--btn-border-radius)",
-        overflow: "hidden",
+        // overflow: "hidden",
 
         ...customStyle,
       }}
       inputStyle={{
         fontSize: "var(--fs-base)",
-        border: "var(--input-border)",
+        border: "var(--input-border-color) 1px solid",
         borderRadius: "var(--input-border-radius)",
         ...inputStyle,
       }}
       placeholder={placeholder}
-      rightIcon={
+      leftIcon={
         <span
           style={{
             borderRadius: "50%",
@@ -37,7 +37,7 @@ function SearchInput({
         >
           <BiSearch
             size={18}
-            color={"#ccc"}
+            color={"#808080"}
             style={{
               marginTop: "0px",
               marginRight: "0px",

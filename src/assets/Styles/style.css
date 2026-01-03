@@ -1,6 +1,7 @@
 :root {
   --main-color: #003553;
   --primary-color: #012E4F;
+  --button-primary-color: #1789C9;
   --secondary-color: #204764;
   --label-color: #18214c;
   --tertiary-color: #33333c;
@@ -64,10 +65,10 @@
   --table-header-bg: #e9eef5;
   --table-border-bottom: #e9eef5;
 
-  --box-background-color: #fdfdfc;
+  --box-background-color: #FFFFFF;
   --bg-color-v1: #fae9e9;
 
-  --border-color: #e9e8e7;
+  --border-color: #EAEDF1;
   --border-color-v1: #dedede;
   --border-color-v2: #e9e8e7;
   --border-color-light: #e8e8e8;
@@ -91,6 +92,7 @@
   --background-quaternary: #ffffff;
   --background-quinary: #ffffff;
   --input-background-color: #ffffff;
+  --dropdown-secondary-background-color: #F0F0F0;
   --secondary-background: #ecf0f5;
   --icon-background: #f1f2f3;
   --card-background: #8d9599;

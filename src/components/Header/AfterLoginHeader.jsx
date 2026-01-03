@@ -12,15 +12,20 @@ export const AfterLoginHeader = ({ header, drawerBtn, search, setSearch }) => {
   let pathName = location.pathname;
   
   if (pathName === "/") {
-    pathName = "/Dashboard";
+    pathName = "Welcome Back! William";
   }
 
   const getPageTitle = (path) => {
     const segment = path.split('/').pop() || '';
-    return segment
+    const withSpaces = segment
+      .replace(/[-_]+/g, ' ')
       .replace(/([A-Z])/g, ' $1')
-      .trim()
-      .replace(/^./, str => str.toUpperCase());
+      .trim();
+    return withSpaces
+      .split(' ')
+      .filter(Boolean)
+      .map(s => s.charAt(0).toUpperCase() + s.slice(1))
+      .join(' ');
   };
   
   const title = getPageTitle(pathName);

@@ -6,7 +6,8 @@
 }
 
 .searchInput {
-  border: 1px solid var(--input-border-color);
+  /* border: 1px solid var(--input-border-color); */
+  border: 1px solid #E4E4E4;
   font-family: var(--ff-primary);
   font-size: var(--fs-base);
   border-radius: var(--input-border-radius);
