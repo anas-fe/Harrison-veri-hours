@@ -125,6 +125,12 @@
   }
 }
 
-.charts_wrapper {display: grid; gap: 20px; grid-template-columns: 58% 40%; width: 100%;}
+.charts_wrapper {display: grid; gap: 20px; grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); width: 100%;}
 .charts_wrapper:first-child {width: 70%;}
 /* .charts_wrapper:last-child {width: 30%;} */
+
+@media (max-width: 1366px) {
+  .charts_wrapper {
+    grid-template-columns: 1fr;
+  }
+}

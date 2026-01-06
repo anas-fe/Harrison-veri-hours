@@ -29,7 +29,7 @@ function ShadowRecords() {
     <>
       <SideBarSkeleton search={search} setSearch={setSearch}>
         <div className="table_wrapper">
-            <TableStructure    
+            <TableStructure headerTitle=""   
             headerHandlers={{
                 search: <SearchInput placeholder="Search here..."/>,
                 dropdown: <DropDown menuPlacement="bottom" placeholder="Status"/>
@@ -56,7 +56,7 @@ function ShadowRecords() {
                 { label: "Start Date", value: "startDate" },
                 { label: "End Date", value: "endDate" },
                 { label: "Category", value: "category" },
-                { label: "Status", value: "status" },
+                { label: "Status", value: "status", dataStyle: { whiteSpace: 'nowrap' } },
                 { label: "Action", value: "action" },
 
             ]}

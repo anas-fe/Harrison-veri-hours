@@ -70,6 +70,8 @@ export default function Recharts({ type, data }) {
 
   const CustomTooltips = ({ active, payload }) => {
     if (active && payload && payload.length) {
+      const val = payload[0].value || 0;
+      // const percent = total ? Math.round((val / total) * 100) : 0;
       return (
         <div
           style={{
@@ -82,7 +84,7 @@ export default function Recharts({ type, data }) {
           }}
         >
           <p style={{ margin: 0, fontWeight: "bold" }}>{payload[0].name}</p>
-          <p style={{ margin: 0 }}>{`${payload[0].value}%`}</p>
+          <p style={{ margin: 0 }}>{val}</p>
         </div>
       );
     }
@@ -108,16 +110,18 @@ export default function Recharts({ type, data }) {
       <text
         x={x}
         y={y}
-        fill="var(--black-color)"
+        fill="transparent"
         textAnchor={x > cx ? "start" : "end"}
         dominantBaseline="central"
         fontSize={12}
         fontWeight="bold"
       >
-        {name} {value}
+       {`${Math.round(percent * 100)}%`} {name}
       </text>
     );
   };
+
+  const total = data?.reduce((s, e) => s + (Number(e.value) || 0), 0) || 0;
 
   const screenSize = useMediaQuery("(max-width: 400px)");
 
@@ -125,11 +129,11 @@ export default function Recharts({ type, data }) {
     <>
       {(!type || type === "pie") && (
         <div className={classes.pieChartContainer}>
-          <ResponsiveContainer width={"100%"} height={400}>
+          <ResponsiveContainer width={300} height={300}>
             <PieChart barGap={10}>
               <Pie
                 data={data}
-                cx="35%"
+                cx="50%"
                 cy="50%"
                 labelLine={false}
                 label={renderCustomizedLabel}
@@ -147,6 +151,11 @@ export default function Recharts({ type, data }) {
                     fill={COLORS[index % COLORS.length]}
                   />
                 ))}
+                <Label
+                  value={`${total} Shadows`}
+                  position="center"
+                  style={{ fill: "var(--primary-color)", fontSize: 18, fontWeight: "bold" }}
+                />
               </Pie>
               <Tooltip content={<CustomTooltips />} />
             </PieChart>
@@ -159,8 +168,8 @@ export default function Recharts({ type, data }) {
                   className={classes.legendDot}
                   style={{ backgroundColor: COLORS[index % COLORS.length] }}
                 ></span>
-                <span className={classes.legendText}>
-                  {entry.name} ({entry.value})
+                <span style={{ fontWeight: 800 }} className={classes.legendText}>
+                  {total ? `${Math.round((entry.value / total) * 100)}%` : "0%"}</span> <span style={{ fontWeight: 400 }} className={classes.legendText}> {entry.name}
                 </span>
               </div>
             ))}
