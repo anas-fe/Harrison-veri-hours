@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   access_token: "",
   isLogin: false,
-  user: null,
+  user: "William Jones",
   mode: "light",
   isOpen: false,
   fcmToken: "abc",

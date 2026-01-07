@@ -5,6 +5,9 @@ import { FiChevronUp } from "react-icons/fi";
 import { useLocation, useNavigate } from "react-router-dom";
 import classes from "./SideBar.module.css";
 import logo from '@/assets/images/logo.png'
+import { FaArrowLeft } from "react-icons/fa6";
+
+
 
 // const SideBar = ({ setIsOpen }) => {
 const SideBar = () => {
@@ -38,7 +41,8 @@ const SideBar = () => {
         <div className={cn(classes.logoutContainer)}>
           <RenderItem
             title="Logout"
-            path=""
+            path="#"
+            icon={<FaArrowLeft />}
             // setIsOpen={setIsOpen}
           />
         </div>

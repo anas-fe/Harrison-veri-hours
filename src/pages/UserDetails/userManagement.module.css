@@ -2,20 +2,11 @@
 .stats_card_info {display: flex; gap: 16px; flex-direction: column;}
 .card_value_unit {font-size: 24px; font-weight: 400; color: var(--black); font-style: italic;}
 
-.user_details_card {
-  padding: 16px;
-  border-radius: 12px;
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  background-color: #FFF;
-}
-
 .stats_card_info .card_value_unit {font-size: 14px; font-family: 'Montserrat-Regular';}
 .stats_card_info .card_title {font-size: 12px;}
 .stats_card_info .card_value {margin-bottom: 0;}
 
-
+.user_details_card {padding: 16px; border-radius: 12px; display: flex; align-items: flex-start; justify-content: space-between; background-color: #FFF; }
 .user_details_card .user_card_picture {width: 140px; height: 140px;}
 .user_details_card .user_card_picture img {width: 100%; height: 100%; border-radius: 12px; object-fit: cover; object-position: center top;}
 .user_details_card .user_card_info_wrapper {display: flex; gap: 16px; align-items: center;}
