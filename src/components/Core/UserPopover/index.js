@@ -1,4 +1,5 @@
 import { imageUrl } from "@/config/apiUrl";
+import userImg from '@/assets/images/userImage.png'
 import { cn } from "@/helper/HelperFunction";
 import { Link } from "react-router-dom";
 import { BiChevronDown, BiUser } from "react-icons/bi";
@@ -35,7 +36,7 @@ export default function UserPopover({ user }) {
       <div className={classes.userPopover}>
         <div className={classes.userPhoto}>
           <img
-            src={user?.photo ? imageUrl(user?.photo) : "/images/profile.png"}
+            src={user?.photo ? imageUrl(user?.photo) : userImg}
             alt="profile"
             width={45}
             height={45}
@@ -43,12 +44,13 @@ export default function UserPopover({ user }) {
         </div>
         <div className={classes.userInfo}>
           <p className={cn(classes.userName)}>{user?.name || "John Doe"}</p>
-          <p className={cn(classes.userEmail)}>
+          {/* <p className={cn(classes.userEmail)}>
             {user?.email || "johndoe@gmail.com"}
-          </p>
+          </p> */}
+          <p className={cn(classes.userEmail)}>{user?.role ?? "Admin"}</p>
         </div>
         <div>
-          <BiChevronDown color={"var(--primary-text-color)"} />
+          {/* <BiChevronDown color={"var(--primary-text-color)"} /> */}
         </div>
       </div>
     </PopperComponent>

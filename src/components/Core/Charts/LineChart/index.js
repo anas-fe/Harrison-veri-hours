@@ -12,7 +12,7 @@ import classes from "./LineChart.module.css";
 
 export default function LineChartComponent({data}) {
   return (
-    <ResponsiveContainer width="100%" height={400}>
+    <ResponsiveContainer width="100%" height={300}>
       <LineChart
         width={500}
         height={300}

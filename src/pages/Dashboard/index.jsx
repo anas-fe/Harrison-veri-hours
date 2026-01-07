@@ -55,63 +55,63 @@ const Dashboard = () => {
     const data = [
     {
       name: 'Jan',
-      'Hours Submitted': 4000,
-      'Hours Approved': 2400,
+      'Hours Submitted': 400,
+      'Hours Approved': 240,
     },
     {
       name: 'Feb',
-      'Hours Submitted': 3000,
-      'Hours Approved': 1398,
+      'Hours Submitted': 300,
+      'Hours Approved': 139,
     },
     {
       name: 'Mar',
-      'Hours Submitted': 2000,
-      'Hours Approved': 9800,
+      'Hours Submitted': 200,
+      'Hours Approved': 380,
     },
     {
       name: 'Apr',
-      'Hours Submitted': 2780,
-      'Hours Approved': 3908,
+      'Hours Submitted': 278,
+      'Hours Approved': 390,
     },
     {
       name: 'May',
-      'Hours Submitted': 1890,
-      'Hours Approved': 4800,
+      'Hours Submitted': 189,
+      'Hours Approved': 480,
     },
     {
       name: 'Jun',
-      'Hours Submitted': 2390,
-      'Hours Approved': 3800,
+      'Hours Submitted': 239,
+      'Hours Approved': 380,
     },
     {
       name: 'Jul',
-      'Hours Submitted': 3490,
-      'Hours Approved': 4300,
+      'Hours Submitted': 349,
+      'Hours Approved': 430,
     },
     {
       name: 'Aug',
-      'Hours Submitted': 3490,
-      'Hours Approved': 4300,
+      'Hours Submitted': 340,
+      'Hours Approved': 430,
     },
     {
       name: 'Sep',
-      'Hours Submitted': 1000,
-      'Hours Approved': 4700,
+      'Hours Submitted': 400,
+      'Hours Approved': 470,
     },
     {
       name: 'Oct',
-      'Hours Submitted': 1490,
-      'Hours Approved': 2300,
+      'Hours Submitted': 149,
+      'Hours Approved': 230,
     },
     {
       name: 'Nov',
-      'Hours Submitted': 2090,
-      'Hours Approved': 1200,
+      'Hours Submitted': 209,
+      'Hours Approved': 120,
     },
     {
       name: 'Dec',
       'Hours Submitted': 590,
-      'Hours Approved': 8000,
+      'Hours Approved': 600,
     },
   ];
     return data;
@@ -134,6 +134,8 @@ function getPieChartData() {
   ];
     return data;
   }
+
+  const [SearchValue, setSearchValue] = useState('');
 
   return (
     <SideBarSkeleton search={search} setSearch={setSearch}>
@@ -172,9 +174,9 @@ function getPieChartData() {
         <div className="stats_cards_main">
           <div className={classes.stats_card_wrapper}>
             <div className={classes.stats_card_info}>
-              <p className={classes.card_title}>Total Shadows</p>
+              <p className={classes.card_title}>Pending Verification Requests</p>
               <h5 className={classes.card_value}>
-                150 <span className={classes.card_value_unit}>Requests</span>
+                15 <span className={classes.card_value_unit}>Requests</span>
               </h5>
             </div>
             <div className={classes.card_logo}>
@@ -183,9 +185,9 @@ function getPieChartData() {
           </div>
           <div className={classes.stats_card_wrapper}>
             <div className={classes.stats_card_info}>
-              <p className={classes.card_title}>Total Shadows</p>
+              <p className={classes.card_title}>Total Users</p>
               <h5 className={classes.card_value}>
-                150 <span className={classes.card_value_unit}>Requests</span>
+                3652 <span className={classes.card_value_unit}>Users</span>
               </h5>
             </div>
             <div className={classes.card_logo}>
@@ -194,9 +196,9 @@ function getPieChartData() {
           </div>
           <div className={classes.stats_card_wrapper}>
             <div className={classes.stats_card_info}>
-              <p className={classes.card_title}>Total Shadows</p>
+              <p className={classes.card_title}>Total Shadowing Hours</p>
               <h5 className={classes.card_value}>
-                150 <span className={classes.card_value_unit}>Requests</span>
+                544 <span className={classes.card_value_unit}>Hours</span>
               </h5>
             </div>
             <div className={classes.card_logo}>
@@ -228,9 +230,9 @@ function getPieChartData() {
         <div className="table_wrapper">
           <h5>Shadowing History</h5>
 
-          <TableStructure
+          <TableStructure headerTitle=""
             headerHandlers={{
-              search: <SearchInput placeholder="Search Users" />,
+              search: <SearchInput value={SearchValue} setter={setSearchValue} placeholder="Search Users" />,
               dropdown: <DropDown menuPlacement="bottom" />,
             }}
             tableContent={userDetailsData.map((item) => {

@@ -8,13 +8,14 @@ import {
 } from "react-icons/md";
 import { RxDashboard } from "react-icons/rx";
 import UserDetail from "@/pages/UserDetails";
+import ShadowingDetails from "@/pages/ShadowingDetails";
 
 
 const Dashboard = lazy(() => import("../pages/Dashboard"));
 
 export const routes = [
   {
-    path: "/",
+    path: "/dashboard",
     exact: true,
     protected: true,
     showInSidebar: true,
@@ -47,6 +48,15 @@ export const routes = [
     showInSidebar: true,
     title: "Shadow Records",
     element: <ShadowRecords />,
+    icon: <TbBooks />,
+  },
+  {
+    path: "/shadowing-details/:id",
+    exact: true,
+    protected: true,
+    showInSidebar: false,
+    title: "Shadowing Details",
+    element: <ShadowingDetails />,
     icon: <TbBooks />,
   },
 ];

@@ -1,10 +1,11 @@
 import { useLocation } from 'react-router-dom';
 import { IoNotificationsOutline } from "react-icons/io5";
 import { useSelector } from "react-redux";
-
+import userImage from '@/assets/images/userImage.png'
 import { useNavigate } from "react-router-dom";
 import Classes from "./AfterLoginHeader.module.css";
 import SearchInput from "../Core/SearchInput";
+import UserPopover from '../Core/UserPopover';
 
 export const AfterLoginHeader = ({ header, drawerBtn, search, setSearch }) => {
 
@@ -58,6 +59,7 @@ export const AfterLoginHeader = ({ header, drawerBtn, search, setSearch }) => {
 
           <IoNotificationsOutline size={20} color="var(--text-color-light)" />
         </div>
+        <UserPopover user={user} ></UserPopover>
       </div>
     </div>
   );

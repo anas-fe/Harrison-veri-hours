@@ -39,7 +39,7 @@ function ShadowRecords() {
                     ...item,
                     status: <Statuses status={item.status} />,
                     action: <PopperComponent handleClick={(e) => 
-                        navigate('user-details/' + item.id)
+                        navigate('/shadowing-details/' + item._id)
                     } data={[
                         {
                         label: 'View Details',
@@ -57,7 +57,7 @@ function ShadowRecords() {
                 { label: "End Date", value: "endDate" },
                 { label: "Category", value: "category" },
                 { label: "Status", value: "status", dataStyle: { whiteSpace: 'nowrap' } },
-                { label: "Action", value: "action" },
+                { label: "", value: "action" },
 
             ]}
             page={page}

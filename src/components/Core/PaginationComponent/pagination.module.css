@@ -11,8 +11,8 @@
   color: var(--text-color);
 }
 .active {
-  color: var(--white-color) !important;
-  background-color: var(--main-color) !important;
+  color: var(--text-color) !important;
+  background-color: #FAFAFA !important;
 }
 .paginationContainer {
   width: 100%;
